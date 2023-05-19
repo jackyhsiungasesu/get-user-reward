@@ -13,8 +13,7 @@ You may also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
 ## Further Enhancement
 ### API
@@ -30,6 +29,3 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 2. Enable filtering of start date and end date of the search. This is related to the first item in API section above
 3. Handle errors. We should show messages if there are no results or there are errors
 4. When the request is pending, show a spinner or a shimmer effect to let users know the request is ongoing
-
-Github
-unit test

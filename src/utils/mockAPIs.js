@@ -4,6 +4,24 @@ const MONTH_NAMES = ["January", "February", "March", "April", "May", "June",
 "July", "August", "September", "October", "November", "December"
 ];
 
+
+const routing = {
+  '/rewards': {
+    'POST': getRewards
+  },
+  '/customers': {
+    'GET': getCustomers
+  }
+};
+
+function mockFetch(path, method, params) {
+  if (routing[path] && routing[path][method]) {
+    return routing[path][method](params);
+  } else {
+    return Promise.reject(new Error('Path or method not found'));
+  }
+}
+
 /**
  * Calculate the points given dollars spent
  *
@@ -76,6 +94,7 @@ function getCustomers() {
 }
 
 module.exports = {
+  mockFetch,
   getRewardPerTransaction,
   getCustomerRewardPerMonth,
   getRewards,

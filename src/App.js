@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Table from './components/Table';
 import './App.css';
-import { getRewards, getCustomers } from './utils/mockAPIs';
+import { mockFetch } from './utils/mockAPIs';
 
 function App() {
   const [ rewards, setRewards ] = useState([]);
@@ -10,9 +10,9 @@ function App() {
 
   const onButtonClick = async () => {
     try {
-      const customers = await getCustomers()
+      const customers = await mockFetch('/customers', 'GET');
       const customerIDs = customers.map(customer => customer.customer_id);
-      const { rewards } = await getRewards(customerIDs)
+      const { rewards } = await mockFetch('/rewards', 'POST', customerIDs);
       
       setUsers(customers.reduce((acc, customer) => {
         acc[customer.customer_id] = customer.name; 
