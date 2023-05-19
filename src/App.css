@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.get-reward-button {
+  min-height: 3rem;
+  max-width: 50%;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #ACB1D6;
+  cursor: pointer;
+  margin: 0.25rem;
+}
+
+.get-reward-button:hover {
+  background-color: #454545;
+}

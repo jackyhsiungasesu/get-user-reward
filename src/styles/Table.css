@@ -1,0 +1,8 @@
+table {
+  max-width: 50%;
+  margin: 0.25rem;
+}
+
+table, td, th {
+  border: 1px solid;
+}
