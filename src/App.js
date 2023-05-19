@@ -4,8 +4,6 @@ import Table from './components/Table';
 import './App.css';
 import { getRewards, getCustomers } from './utils/mockAPIs';
 
-
-
 function App() {
   const [ rewards, setRewards ] = useState([]);
   const [ users, setUsers ] = useState([]);
@@ -19,7 +17,7 @@ function App() {
       setUsers(customers.reduce((acc, customer) => {
         acc[customer.customer_id] = customer.name; 
         return acc;
-      }, {}))
+      }, {}));
       setRewards(rewards);
     } catch (error) {
       console.error(error);
